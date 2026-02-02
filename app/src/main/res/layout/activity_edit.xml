@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Edit Location"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Your Location"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter title"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background"
+                android:backgroundTint="@color/grey"
+                android:padding="8dp"
+                android:minHeight="48dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add 6 digits after decimal for Latitude &amp; Longitude"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="start">
+
+                <EditText
+                    android:id="@+id/editTextLatitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Latitude"
+                    android:padding="8dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="@color/grey"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:minHeight="48dp"
+                    android:layout_marginEnd="5dp" />
+
+                <EditText
+                    android:id="@+id/editTextLongitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Longitude"
+                    android:padding="8dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="@color/grey"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:minHeight="48dp"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Enter description"
+                android:background="@drawable/background"
+                android:backgroundTint="@color/grey"
+                android:gravity="top"
+                android:layout_marginTop="10dp"
+                android:inputType="textMultiLine"
+                android:padding="8dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/background"
+                android:backgroundTint="@color/grey"
+                android:gravity="start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is Star?"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/textViewIsStar"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <Switch
+                    android:id="@+id/switchIsStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:minWidth="48dp"
+                    android:background="@color/grey"
+                    android:minHeight="48dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primary"
+                android:text="Save Changes"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

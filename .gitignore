@@ -1,0 +1,28 @@
+# ===== Android / Gradle =====
+.gradle/
+build/
+*/build/
+.cxx/
+.externalNativeBuild/
+
+# ===== Local config / secrets =====
+local.properties
+app/google-services.json
+google-services.json
+*.keystore
+*.jks
+*.pem
+
+# ===== IDE: Android Studio / IntelliJ =====
+.idea/
+*.iml
+
+# ===== VS Code =====
+.vscode/
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs / Temp =====
+*.log
